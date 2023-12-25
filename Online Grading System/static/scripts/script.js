@@ -38,7 +38,7 @@ function Circle(x, y, radius, speed, color) {
 
 const circleArray = [];
 for (let i = 0; i < 500; i++) {
-  let colors = ["#573b8b", "#425898", "#212874", "#252c62"];
+  let colors = ["#425898", "#212874", "#573b8b"];
   // colors[Math.floor(Math.random * colors.length)];
   let radius = 20;
   let x = myCanvas.width / 2 - 280;
