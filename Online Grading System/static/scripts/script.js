@@ -37,13 +37,17 @@ function Circle(x, y, radius, speed, color) {
 }
 
 const circleArray = [];
-const colors = ["#573b8b", "#425898", "#212874", "#252c62"];
 for (let i = 0; i < 500; i++) {
+  let colors = ["#573b8b", "#425898", "#212874", "#252c62"];
+  // colors[Math.floor(Math.random * colors.length)];
   let radius = 20;
-  let x = myCanvas.width / 2;
+  let x = myCanvas.width / 2 - 280;
   let y = myCanvas.height / 2;
   let speed = Math.random() * 9;
-  let color = colors[Math.floor(Math.random * colors.length)];
+  let color = undefined;
+  for (let c = 0; c < colors.length; c++) {
+    color = colors[Math.floor(Math.random() * colors.length)];
+  }
   circleArray.push(new Circle(x, y, radius, speed, color));
 }
 
